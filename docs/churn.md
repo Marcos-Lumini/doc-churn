@@ -11,6 +11,8 @@ Pensando no custo e desgaste para as Empresas durante o processo de Churn  desen
 
 Completar com informações do framework
 
+![jornada](./img/churn.png)
+
 ## Fluxo de trabalho
 completar criando fluxo de trabalho ideal
 
