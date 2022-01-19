@@ -1,0 +1,613 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="img/luminiX.png">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.1.6">
+    
+    
+      
+        <title>Lumini</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.cd566b2a.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.e6a45f82.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL(".",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="purple" data-md-color-accent="">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#lumini-gestao-de-churn-rate" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="." title="Lumini" class="md-header__button md-logo" aria-label="Lumini" data-md-component="logo">
+      
+  <img src="img/luminiX.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Lumini
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Lumini Gestão de Churn Rate
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="purple" data-md-color-accent=""  aria-label="modo noturno"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="modo noturno" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3 3.19.09m3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95 2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="deep--purple" data-md-color-accent=""  aria-label="modo claro"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="modo claro" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5c-.84 0-1.65.15-2.39.42L12 2M3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29L3.34 7m.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14L3.36 17M20.65 7l-1.77 3.79a7.023 7.023 0 0 0-2.38-4.15l4.15.36m-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29L20.64 17M12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44L12 22z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="." title="Lumini" class="md-nav__button md-logo" aria-label="Lumini" data-md-component="logo">
+      
+  <img src="img/luminiX.png" alt="logo">
+
+    </a>
+    Lumini
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Lumini Gestão de Churn Rate
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="." class="md-nav__link md-nav__link--active">
+        Lumini Gestão de Churn Rate
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#o-que-e-indice-de-churn" class="md-nav__link">
+    O que é índice de Churn?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tipos-de-churn" class="md-nav__link">
+    Tipos de Churn
+  </a>
+  
+    <nav class="md-nav" aria-label="Tipos de Churn">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#churn-voluntario" class="md-nav__link">
+    Churn voluntário
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#churn-involuntario" class="md-nav__link">
+    Churn involuntário
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#revenue-churn" class="md-nav__link">
+    Revenue Churn
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#early-churn" class="md-nav__link">
+    Early churn
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dicas-para-ajudar-a-reduzir-o-churn" class="md-nav__link">
+    Dicas para ajudar a reduzir o Churn
+  </a>
+  
+    <nav class="md-nav" aria-label="Dicas para ajudar a reduzir o Churn">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#entenda-por-que-os-clientes-cancelam-o-servico" class="md-nav__link">
+    Entenda por que os clientes cancelam o serviço
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#crie-a-cultura-do-feedback" class="md-nav__link">
+    Crie a cultura do feedback
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mapeie-clientes-com-maior-chance-de-cancelamento" class="md-nav__link">
+    Mapeie clientes com maior chance de cancelamento
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="churn/" class="md-nav__link">
+        Motor de churn
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#o-que-e-indice-de-churn" class="md-nav__link">
+    O que é índice de Churn?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tipos-de-churn" class="md-nav__link">
+    Tipos de Churn
+  </a>
+  
+    <nav class="md-nav" aria-label="Tipos de Churn">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#churn-voluntario" class="md-nav__link">
+    Churn voluntário
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#churn-involuntario" class="md-nav__link">
+    Churn involuntário
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#revenue-churn" class="md-nav__link">
+    Revenue Churn
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#early-churn" class="md-nav__link">
+    Early churn
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dicas-para-ajudar-a-reduzir-o-churn" class="md-nav__link">
+    Dicas para ajudar a reduzir o Churn
+  </a>
+  
+    <nav class="md-nav" aria-label="Dicas para ajudar a reduzir o Churn">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#entenda-por-que-os-clientes-cancelam-o-servico" class="md-nav__link">
+    Entenda por que os clientes cancelam o serviço
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#crie-a-cultura-do-feedback" class="md-nav__link">
+    Crie a cultura do feedback
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mapeie-clientes-com-maior-chance-de-cancelamento" class="md-nav__link">
+    Mapeie clientes com maior chance de cancelamento
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+<h1 id="lumini-gestao-de-churn-rate">Lumini Gestão de Churn Rate</h1>
+<h2 id="o-que-e-indice-de-churn">O que é índice de Churn?</h2>
+<p>O índice de Churn ou Churn rate, em inglês, é uma métrica utilizada por empresas para calcular a taxa de cancelamento ou desistência de clientes em um determinado período. </p>
+<p>O resultado desse cálculo interfere diretamente na receita do negócio e, por isso, deve ser levado a sério pelos gestores.</p>
+<p>Essa métrica pode ser utilizada por empresas de qualquer setor, mas tem uma importância particular àquelas que funcionam como SaaS (sigla para Software as a Service) e oferecem serviços por assinatura a seus usuários. </p>
+<p>É geralmente mais caro conquistar novos clientes do que manter os já existentes. Em muitos setores, o custo de aquisição de novos clientes pode ser cinco vezes superior ao seu custo de retenção (KURTZ e CLOW, 1998). No setor bancário americano, por exemplo, estima-se que 30% da base de clientes seja vulnerável à migração (ACCENTURE, 2009).</p>
+<p>O churn, também, está diretamente associado ao tempo em que o indivíduo permanece como cliente de uma organização, portanto está diretamente relacionado ao conceito de Consumer Life Time Value (CLV ou valor do ciclo de vida do cliente) (NESLIN e outros, 2006). Glady e outros (2009), usando uma abordagem centrada no cliente, definiram churner como aquele cliente cujo CLV é decrescente ao longo do tempo.</p>
+<p>Churn rate é capaz de revelar a fidelidade dos clientes a uma empresa, indicando sua capacidade de reter consumidores satisfeitos — seja qual for o modelo de negócio.</p>
+<p><img alt="Estatisitica" src="img/statistic.png" /></p>
+<p>Se hoje o churn é um problema sério no seu negócio, ou se você está buscando evitar que ele se torne um, é essencial enxergá-lo de forma realista, isto é, como sintoma de uma doença mais profunda.</p>
+<p>E essa doença é o fracasso na hora de garantir o resultado desejado dos clientes, seja porque você não consegue entregar o sucesso que eles buscam ou porque você está conquistando clientes com baixo potencial</p>
+<blockquote>
+<p><em>“o churn é o indício de que algo está errado, ou seja, ele não é o problema propriamente dito”.</em> </p>
+<p><strong>Lincoln Murphy</strong></p>
+</blockquote>
+<h2 id="tipos-de-churn">Tipos de Churn</h2>
+<ul>
+<li>
+<h3 id="churn-voluntario">Churn voluntário</h3>
+</li>
+</ul>
+<p>O Churn voluntário é um dos tipos de Churn que ocorrem com maior frequência no mercado. Isso porque ele indica cancelamentos feitos pelos próprios consumidores, de forma espontânea.</p>
+<p>Se você identificar um aumento da taxa de Churn voluntário na sua empresa, o indicado é conduzir uma pesquisa na etapa de cancelamento para que usuários possam indicar o motivo por trás da desistência. Entre as principais razões, podemos destacar:</p>
+<ul>
+<li>insatisfação com o produto;  </li>
+<li>questões financeiras;</li>
+<li>ausência de suporte ao cliente;</li>
+<li>falta de personalização no atendimento;</li>
+<li>o produto não gerou valor para o cliente;</li>
+<li>o produto não gerou benefícios necessários para fidelização. </li>
+</ul>
+<p>É preciso entender o que causou o descontentamento, principalmente caso aconteça uma onda de cancelamentos com a mesma justificativa. Se o usuário tiver cancelado o serviço devido a problemas financeiros, por exemplo, é uma oportunidade para tentar reativar esse cliente oferecendo alguma promoção ou benefício.</p>
+<ul>
+<li>
+<h3 id="churn-involuntario">Churn involuntário</h3>
+</li>
+</ul>
+<p>O Churn involuntário é a métrica que calcula a taxa de cancelamentos que acontecem sem a vontade do cliente. Alguns motivos para que isso aconteça são:</p>
+<p>problema na cobrança de pagamento, como no caso de cartões de crédito bloqueados;
+- fraude detectada;
+- falta de pagamento;
+- falha na transação de pagamento;
+- fim do contrato sem renovação por parte do usuário.
+- 
+A melhor maneira de evitar esse tipo de Churn rate é utilizar um sistema automatizado que informe o cliente sobre a necessidade de atualizar o método de pagamento ou renovar o plano de assinatura.</p>
+<ul>
+<li>
+<h3 id="revenue-churn">Revenue Churn</h3>
+</li>
+</ul>
+<p>O revenue Churn pode ser calculado a partir da taxa de cancelamentos e taxa de downgrades — medida em receita perdida no período. O downgrade acontece quando os usuários de um serviço trocam seus pacotes por opções mais baratas.</p>
+<p>Embora não seja de fato um cancelamento, o downgrade também impacta a receita da empresa, já que o faturamento diminui. Para calcular seu índice de revenue Churn, você pode realizar o seguinte cálculo:</p>
+<p>(receita perdida no período / receita total no período) x 100 = % de Churn</p>
+<ul>
+<li>
+<h3 id="early-churn">Early churn</h3>
+</li>
+</ul>
+<p>Early churn pode ser traduzido como um cancelamento precoce, que ocorre poucos dias após a venda ou aquisição de um produto ou serviço pelo usuário.</p>
+<h2 id="dicas-para-ajudar-a-reduzir-o-churn">Dicas para ajudar a reduzir o Churn</h2>
+<p>Além de acompanhar as métricas e nunca deixar de realizar o cálculo de Churn de acordo com as necessidades da empresa, é preciso que os gestores realizem ações assertivas e frequentes para manter o índice no nível mais baixo possível.</p>
+<ul>
+<li>
+<h4 id="entenda-por-que-os-clientes-cancelam-o-servico">Entenda por que os clientes cancelam o serviço</h4>
+</li>
+</ul>
+<p>Sem entender os motivos que fazem seus clientes desistirem do seu produto, fica difícil saber quais atitudes tomar para diminuir o Churn. O ideal é acrescentar uma questão não-obrigatória que dê ao usuário a oportunidade de explicar o que aconteceu.</p>
+<p>Segundo a Lee Resources, basta a empresa resolver uma reclamação a favor do cliente e terá 70% de chance dele voltar a fazer negócios com ela.</p>
+<p>A melhor maneira de apresentar essa questão é em formato de enquete com algumas das opções mais frequentes já visíveis (insatisfação, questões financeiras, preferência pela concorrência, pouca utilização do serviço, etc.) e uma caixa de texto que permita à pessoa acrescentar mais informações sobre o cancelamento.</p>
+<ul>
+<li>
+<h4 id="crie-a-cultura-do-feedback">Crie a cultura do feedback</h4>
+</li>
+</ul>
+<p>Ainda batendo na tecla da relação com o consumidor, é necessário manter sempre aberto um canal de diálogo para que ele possa expressar suas opiniões sobre o serviço oferecido.</p>
+<p>Isso não deve ser feito somente quando for a hora de mapear possíveis cancelamentos, mas como forma de promover a contínua evolução da plataforma para atrair, também, futuros clientes.</p>
+<ul>
+<li>
+<h4 id="mapeie-clientes-com-maior-chance-de-cancelamento">Mapeie clientes com maior chance de cancelamento</h4>
+</li>
+</ul>
+<p>Pesquisas também podem ser aliadas na hora de evitar que clientes cancelem suas assinaturas. Ouvir o que os usuários da sua plataforma têm a dizer é importante para entender suas necessidades e mantê-los fiéis à marca.</p>
+<p>As pesquisas são grandes aliadas, mas podem ser caras e demoradas. Outra forma de mapear os clientes propensos a deixar o serviço é criar <a href="churn/">algoritmos de machine learning</a> capaz de apontar esta probabilidade.</p>
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+      
+        
+        <a href="churn/" class="md-footer__link md-footer__link--next" aria-label="Next: Motor de churn" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Motor de churn
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2022  LuminiX
+    </div>
+  
+  
+   
+    <a href="" target="_blank" rel="noopener">
+      by Marcos Souto
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": ".", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "assets/javascripts/workers/search.22074ed6.min.js"}</script>
+    
+    
+      <script src="assets/javascripts/bundle.1514a9a0.min.js"></script>
+      
+        <script src="javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
