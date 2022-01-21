@@ -13,7 +13,7 @@
     
     
       
-        <title>Motor de churn - Lumini</title>
+        <title>Motor de Churn - LuminiX</title>
       
     
     
@@ -76,7 +76,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="Lumini" class="md-header__button md-logo" aria-label="Lumini" data-md-component="logo">
+    <a href=".." title="LuminiX" class="md-header__button md-logo" aria-label="LuminiX" data-md-component="logo">
       
   <img src="../img/luminiX.png" alt="logo">
 
@@ -88,13 +88,13 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            Lumini
+            LuminiX
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Motor de churn
+              Motor de Churn
             
           </span>
         </div>
@@ -183,12 +183,12 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="Lumini" class="md-nav__button md-logo" aria-label="Lumini" data-md-component="logo">
+    <a href=".." title="LuminiX" class="md-nav__button md-logo" aria-label="LuminiX" data-md-component="logo">
       
   <img src="../img/luminiX.png" alt="logo">
 
     </a>
-    Lumini
+    LuminiX
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -226,12 +226,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          Motor de churn
+          Motor de Churn
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        Motor de churn
+        Motor de Churn
       </a>
       
         
@@ -252,6 +252,13 @@
         <li class="md-nav__item">
   <a href="#o-framework" class="md-nav__link">
     O Framework
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fluxo-de-trabalho-para-validacao" class="md-nav__link">
+    Fluxo de trabalho para validação
   </a>
   
 </li>
@@ -280,13 +287,6 @@
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#fluxo-de-trabalho" class="md-nav__link">
-    Fluxo de trabalho
-  </a>
   
 </li>
       
@@ -332,6 +332,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#fluxo-de-trabalho-para-validacao" class="md-nav__link">
+    Fluxo de trabalho para validação
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#teste-grupo-controle" class="md-nav__link">
     Teste Grupo Controle
   </a>
@@ -358,13 +365,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#fluxo-de-trabalho" class="md-nav__link">
-    Fluxo de trabalho
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -378,24 +378,27 @@
               
                 
 
-<h1 id="motor-de-churn">Motor de churn</h1>
+<h1 id="motor-de-churn">Motor de Churn</h1>
 <p>O Motor Churn, utiliza um conjunto de algoritmos de IA com o objetivo de atribuir uma probabilidade do Cliente abandonar a marca, serviço ou produto oferecido , direcionando assim os times de retenção e marketing entre outros, na elaboração de ações personalizas.</p>
 <p>Pensando no custo e desgaste para as Empresas durante o processo de Churn  desenvolvemos a Jornada Customer Retetion</p>
 <p><img alt="jornada" src="../img/jornadachurn.png" /></p>
-<h2 id="o-framework">O Framework</h2>
-<p>Completar com informações do framework</p>
+<h2 id="o-framework"><strong>O Framework</strong></h2>
+<p>O modelo de churn irá avaliar os clientes e classificá-los com suas respectivas probabilidade de propensão ao cancelamento de contratos. O modelo terá como target contrato de clientes Cancela ou Não Cancela.</p>
+<p>É realizado em fases para atender a demanda do cliente, que realiza campanhas de retenção periodicamente. O modelo de churn auxilia nas campanhas de retenção com a classificação dos clientes(contratos) e facilitando ao agente de retenção identificar qual cliente apresenta risco de cancelamento de contrato.</p>
 <p><img alt="jornada" src="../img/churn.png" /></p>
-<h2 id="teste-grupo-controle">Teste Grupo Controle</h2>
+<h2 id="fluxo-de-trabalho-para-validacao"><strong>Fluxo de trabalho para validação</strong></h2>
+<p>A seguir apresentamos proposta de fluxo de trabalho para utilização do Motor de Churn</p>
+<p><img alt="fluxo" src="../img/fluxochurn.png" /></p>
+<p>É primordial em uma avaliação o controle total sobre todas as interações com o grupo experimental, por isso este grupo não pode ser maior que a capacidade sua capacidade de controla-lo, pois este grupo serve tanto para avaliar a efetividade das ações quando a qualidade do modelo de propensão a churn.</p>
+<h2 id="teste-grupo-controle"><strong>Teste Grupo Controle</strong></h2>
 <p>O método científico para pesquisar são utilizados para diversos estudos. O método científico começa com uma observação, o que leva o cientista a fazer um questionamento. Depois ele apresenta uma hipótese, que é uma explicação a ser testada para responder a questão.</p>
-<p>Uma hipótese não está necessariamente certa. Na verdade é uma 'melhor opção', e o cientista deve testa-la para verificar sua correção. Cientistas testam hipóteses fazendo predições: Se a hipótese \text XXstart text, X, end text é correta, então \text YYstart text, Y, end text deve ser verdadeiro. Daí eles fazem experimentos ou observações para verificar se as suas predições estão corretas. Se estiverem, a hipótese é mantida. Se não estiverem, talvez seja hora para uma nova hipótese.</p>
+<p>Uma hipótese não está necessariamente certa. Na verdade é uma 'melhor opção', e o cientista deve testa-la para verificar sua correção. Cientistas testam hipóteses fazendo predições: Se a hipótese X é correta, então Y deve ser verdadeiro. Daí eles fazem experimentos ou observações para verificar se as suas predições estão corretas. Se estiverem, a hipótese é mantida. Se não estiverem, talvez seja hora para uma nova hipótese.</p>
 <p>Quando possível, os cientistas testam suas hipóteses usando experimentos controlados. Um experimento controlado é um teste científico feito sob condições controladas, o que significa que apenas um (ou poucos) fatores são alterados a cada vez, enquanto todos os outros são mantidos constantes.</p>
-<h4 id="grupos-controle-e-experimental">Grupos Controle e Experimental</h4>
+<h4 id="grupos-controle-e-experimental"><strong>Grupos Controle e Experimental</strong></h4>
 <p>Há dois grupos no experimento e eles são idênticos, exceto que um recebe um tratamento, no caso da gestão de churn alguma ação com objetivo de reter o cliente, enquanto o outro não recebe nada segue vida normal. O grupo que recebe o tratamento num experimento é chamado de grupo experimental, enquanto o grupo que não recebe o tratamento é chamado de grupo controle. O grupo controle fornece um padrão, ou referência, que permite avaliar se o tratamento tem um efeito.</p>
-<h4 id="variaveis-independentes-e-dependentes">Variáveis Independentes e Dependentes</h4>
+<h4 id="variaveis-independentes-e-dependentes"><strong>Variáveis Independentes e Dependentes</strong></h4>
 <p>O fator que é diferente entre os grupos de controle e experimental, neste caso o tipo de ação, é conhecido como a variável independente. Esta variável é independente porque ela não depende do que acontece no experimento. Ao invés, ela é algo que o pesquisador aplica ou escolhe ele mesmo.
 Em contraste, a variável dependente num experimento é a resposta que é medida para ver se o tratamento tem um efeito. Neste caso, a fração de clientes retidos é a variável dependente. A variável dependente depende da variável independente, e não vice-versa.</p>
-<h2 id="fluxo-de-trabalho">Fluxo de trabalho</h2>
-<p>completar criando fluxo de trabalho ideal</p>
 
               
             </article>

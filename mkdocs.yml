@@ -1,4 +1,4 @@
-site_name: Lumini
+site_name: LuminiX
 theme:
   logo: ./img/luminiX.png
   name: material
@@ -17,6 +17,8 @@ theme:
 
 markdown_extensions:
   - pymdownx.highlight
+  - pymdownx.superfences
+  - pymdownx.inlinehilite
   - pymdownx.superfences
   - pymdownx.arithmatex:
       generic: true
