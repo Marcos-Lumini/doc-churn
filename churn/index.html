@@ -254,6 +254,19 @@
     O Framework
   </a>
   
+    <nav class="md-nav" aria-label="O Framework">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#churn-framework-resultados-de-model-ranking" class="md-nav__link">
+    CHURN FRAMEWORK – Resultados de Model Ranking
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -298,6 +311,21 @@
   
 
     
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../metricas/" class="md-nav__link">
+        Metricas para validação de modelos de machine learning
+      </a>
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -328,6 +356,19 @@
   <a href="#o-framework" class="md-nav__link">
     O Framework
   </a>
+  
+    <nav class="md-nav" aria-label="O Framework">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#churn-framework-resultados-de-model-ranking" class="md-nav__link">
+    CHURN FRAMEWORK – Resultados de Model Ranking
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -381,15 +422,42 @@
 <h1 id="motor-de-churn">Motor de Churn</h1>
 <p>O Motor Churn, utiliza um conjunto de algoritmos de IA com o objetivo de atribuir uma probabilidade do Cliente abandonar a marca, serviço ou produto oferecido , direcionando assim os times de retenção e marketing entre outros, na elaboração de ações personalizas.</p>
 <p>Pensando no custo e desgaste para as Empresas durante o processo de Churn  desenvolvemos a Jornada Customer Retetion</p>
-<p><img alt="jornada" src="../img/jornadachurn.png" /></p>
+<p><img alt="jornada" src="../img/jornadachurn.png" style="height:70%;width:70%" /> <img alt="test" src="../img/academy.gif" style="height:200px;width:200px" /></p>
 <h2 id="o-framework"><strong>O Framework</strong></h2>
 <p>O modelo de churn irá avaliar os clientes e classificá-los com suas respectivas probabilidade de propensão ao cancelamento de contratos. O modelo terá como target contrato de clientes Cancela ou Não Cancela.</p>
 <p>É realizado em fases para atender a demanda do cliente, que realiza campanhas de retenção periodicamente. O modelo de churn auxilia nas campanhas de retenção com a classificação dos clientes(contratos) e facilitando ao agente de retenção identificar qual cliente apresenta risco de cancelamento de contrato.</p>
-<p><img alt="jornada" src="../img/churn.png" /></p>
+<p><img alt="jornada" src="../img/churn.png" /> </p>
+<h3 id="churn-framework-resultados-de-model-ranking">CHURN FRAMEWORK – Resultados de Model Ranking</h3>
+<p>O Resultado apresentado, mostra a capacidade do modelo de classificar (probabilisticamente), a possibilidade de saída de um cliente.</p>
+<p><strong>As métricas utilizadas foram: Precisão, Recall, F1-Score, Acurácia, ROC-AUC e KS Score</strong></p>
+<p><img alt="metrica" src="../img/metrica2.png" /></p>
+<!-- [detalhes sobre metricas](metricas.md) -->
+<p><a class="md-button" href="../metricas/">detalhes sobre metricas</a></p>
+<details class="question" open="open">
+<summary>Question</summary>
+<div class="highlight"><pre><span></span><code>Dos dados gerais (Churn vs Não-Churn), o quanto o classificador está realmente certo?
+
+Dos dados classificados como “positivo” (Churn), quantos realmente eram?
+
+Quanto dos Dados de Churn e Não-Churn, ele classifica corretamente nas classes?
+
+Qual a qualidade real do equilíbrio de classificação do modelo?
+
+O quão bom o modelo criado pode distinguir entre duas coisas? (Churn vs. Não-Churn).
+
+O quão bem o modelo separa as classes da variável resposta? (Churn vs. Não-Churn).
+</code></pre></div>
+</details>
+<p>Dada a contextualização anterior concluímos que o modelo de churn é um modelo de priorização, pois churn em geral são eventos minoritários em uma base de clientes. Por este motivo os modelos conseguem discriminar entre duas classes, clientes com e sem potencial de churn, isso não significa acurácia, não é possível afirmar que dentre as pessoas classificadas com potencial de churn ela realmente irão abandonar o serviço. Ele tem o potencial de dar uma população que deve ser priorizada ao aplicar uma ação de retenção.</p>
 <h2 id="fluxo-de-trabalho-para-validacao"><strong>Fluxo de trabalho para validação</strong></h2>
-<p>A seguir apresentamos proposta de fluxo de trabalho para utilização do Motor de Churn</p>
+<p>A seguir apresentamos proposta de fluxo de trabalho para utilização do Motor de Churn. Nestas proposta apresentamos um fluxo onde cada caixa é um subprocesso que dever ser muito bem trabalhado.</p>
 <p><img alt="fluxo" src="../img/fluxochurn.png" /></p>
-<p>É primordial em uma avaliação o controle total sobre todas as interações com o grupo experimental, por isso este grupo não pode ser maior que a capacidade sua capacidade de controla-lo, pois este grupo serve tanto para avaliar a efetividade das ações quando a qualidade do modelo de propensão a churn.</p>
+<div class="admonition important">
+<p class="admonition-title">Importante</p>
+<p>É primordial a criação de um plano de ação, com ações de retenção especificas para população selecionada, todas interações com esta população devem ser registradas, para retroalimentar o sistema avaliando a efetividade das ações e a capacidade do modelo de churn.
+Pois se não é possível criar um plano com ações de retenção, provavelmente é porque não se sabe o real motivo do churn, se não conhece os motivos pelo qual os clientes abandonam seu serviço, talvez os seus indicadores não são suficientes para tal.</p>
+</div>
+<p>A criação do grupo experimental é extremamente importante, este grupo não pode ser maior que a sua capacidade de controla-lo, pois este grupo serve tanto para avaliar a efetividade das ações quando a capacidade do modelo de discriminar as classes.</p>
 <h2 id="teste-grupo-controle"><strong>Teste Grupo Controle</strong></h2>
 <p>O método científico para pesquisar são utilizados para diversos estudos. O método científico começa com uma observação, o que leva o cientista a fazer um questionamento. Depois ele apresenta uma hipótese, que é uma explicação a ser testada para responder a questão.</p>
 <p>Uma hipótese não está necessariamente certa. Na verdade é uma 'melhor opção', e o cientista deve testa-la para verificar sua correção. Cientistas testam hipóteses fazendo predições: Se a hipótese X é correta, então Y deve ser verdadeiro. Daí eles fazem experimentos ou observações para verificar se as suas predições estão corretas. Se estiverem, a hipótese é mantida. Se não estiverem, talvez seja hora para uma nova hipótese.</p>
@@ -427,6 +495,21 @@ Em contraste, a variável dependente num experimento é a resposta que é medida
         </a>
       
       
+        
+        <a href="../metricas/" class="md-footer__link md-footer__link--next" aria-label="Next: Metricas para validação de modelos de machine learning" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Metricas para validação de modelos de machine learning
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
     </nav>
   
   <div class="md-footer-meta md-typeset">
@@ -457,6 +540,12 @@ Em contraste, a variável dependente num experimento é a resposta que é medida
     
     
       <script src="../assets/javascripts/bundle.1514a9a0.min.js"></script>
+      
+        <script src="../optionalConfig.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+      
+        <script src="../extra-loader.js"></script>
       
         <script src="../javascripts/mathjax.js"></script>
       
